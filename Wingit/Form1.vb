@@ -33,4 +33,8 @@
     Private Sub BtmLoadZaznamy_Click(sender As Object, e As EventArgs) Handles BtmLoadZaznamy.Click
         LoadEden()
     End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+
+    End Sub
 End Class
