@@ -31,12 +31,8 @@ Partial Class Form1
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.BtmLoadZaznamy = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.ListView1 = New System.Windows.Forms.ListView()
-        Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.IDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IDMISTODataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IDAUTORDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -56,18 +52,23 @@ Partial Class Form1
         Me.NEMCASZADDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataSetEdenBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DataSetEden = New WAgit.DataSetEden()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.ListView1 = New System.Windows.Forms.ListView()
+        Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ZaznamyTableAdapter1 = New WAgit.DataSetEdenTableAdapters.ZAZNAMYTableAdapter()
         Me.FbConnection1 = New FirebirdSql.Data.FirebirdClient.FbConnection()
         Me.FbDataAdapter1 = New FirebirdSql.Data.FirebirdClient.FbDataAdapter()
         Me.FbCSelectZaznamy = New FirebirdSql.Data.FirebirdClient.FbCommand()
-        Me.BtmLoadZaznamy = New System.Windows.Forms.Button()
+        Me.Btn3 = New System.Windows.Forms.Button()
         Me.StatusStrip1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabPage2.SuspendLayout()
         CType(Me.DataSetEdenBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataSetEden, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage2.SuspendLayout()
         Me.SuspendLayout()
         '
         'StatusStrip1
@@ -121,6 +122,7 @@ Partial Class Form1
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.Btn3)
         Me.TabPage1.Controls.Add(Me.BtmLoadZaznamy)
         Me.TabPage1.Controls.Add(Me.DataGridView1)
         Me.TabPage1.Controls.Add(Me.Button1)
@@ -131,6 +133,15 @@ Partial Class Form1
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Procesy"
         Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'BtmLoadZaznamy
+        '
+        Me.BtmLoadZaznamy.Location = New System.Drawing.Point(191, 16)
+        Me.BtmLoadZaznamy.Name = "BtmLoadZaznamy"
+        Me.BtmLoadZaznamy.Size = New System.Drawing.Size(75, 23)
+        Me.BtmLoadZaznamy.TabIndex = 3
+        Me.BtmLoadZaznamy.Text = "Load"
+        Me.BtmLoadZaznamy.UseVisualStyleBackColor = True
         '
         'DataGridView1
         '
@@ -144,47 +155,6 @@ Partial Class Form1
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(627, 202)
         Me.DataGridView1.TabIndex = 2
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(18, 15)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(124, 24)
-        Me.Button1.TabIndex = 1
-        Me.Button1.Text = "BtnRun"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'TabPage2
-        '
-        Me.TabPage2.Controls.Add(Me.ListView1)
-        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(633, 250)
-        Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "Co dělám"
-        Me.TabPage2.UseVisualStyleBackColor = True
-        '
-        'ListView1
-        '
-        Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2})
-        Me.ListView1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.ListView1.Location = New System.Drawing.Point(3, 98)
-        Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(627, 149)
-        Me.ListView1.TabIndex = 4
-        Me.ListView1.UseCompatibleStateImageBehavior = False
-        Me.ListView1.View = System.Windows.Forms.View.Details
-        '
-        'ColumnHeader1
-        '
-        Me.ColumnHeader1.Text = "Čas"
-        Me.ColumnHeader1.Width = 120
-        '
-        'ColumnHeader2
-        '
-        Me.ColumnHeader2.Text = "Info"
-        Me.ColumnHeader2.Width = 600
         '
         'IDDataGridViewTextBoxColumn
         '
@@ -298,6 +268,47 @@ Partial Class Form1
         Me.DataSetEden.DataSetName = "DataSetEden"
         Me.DataSetEden.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(18, 15)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(124, 24)
+        Me.Button1.TabIndex = 1
+        Me.Button1.Text = "BtnRun"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'TabPage2
+        '
+        Me.TabPage2.Controls.Add(Me.ListView1)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage2.Name = "TabPage2"
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage2.Size = New System.Drawing.Size(633, 250)
+        Me.TabPage2.TabIndex = 1
+        Me.TabPage2.Text = "Co dělám"
+        Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'ListView1
+        '
+        Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2})
+        Me.ListView1.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.ListView1.Location = New System.Drawing.Point(3, 98)
+        Me.ListView1.Name = "ListView1"
+        Me.ListView1.Size = New System.Drawing.Size(627, 149)
+        Me.ListView1.TabIndex = 4
+        Me.ListView1.UseCompatibleStateImageBehavior = False
+        Me.ListView1.View = System.Windows.Forms.View.Details
+        '
+        'ColumnHeader1
+        '
+        Me.ColumnHeader1.Text = "Čas"
+        Me.ColumnHeader1.Width = 120
+        '
+        'ColumnHeader2
+        '
+        Me.ColumnHeader2.Text = "Info"
+        Me.ColumnHeader2.Width = 600
+        '
         'ZaznamyTableAdapter1
         '
         Me.ZaznamyTableAdapter1.ClearBeforeFill = True
@@ -316,14 +327,14 @@ Partial Class Form1
         FbParameter1.Value = "'1.1.2016'"
         Me.FbCSelectZaznamy.Parameters.Add(FbParameter1)
         '
-        'BtmLoadZaznamy
+        'Btn3
         '
-        Me.BtmLoadZaznamy.Location = New System.Drawing.Point(382, 17)
-        Me.BtmLoadZaznamy.Name = "BtmLoadZaznamy"
-        Me.BtmLoadZaznamy.Size = New System.Drawing.Size(75, 23)
-        Me.BtmLoadZaznamy.TabIndex = 3
-        Me.BtmLoadZaznamy.Text = "Load"
-        Me.BtmLoadZaznamy.UseVisualStyleBackColor = True
+        Me.Btn3.Location = New System.Drawing.Point(440, 16)
+        Me.Btn3.Name = "Btn3"
+        Me.Btn3.Size = New System.Drawing.Size(75, 23)
+        Me.Btn3.TabIndex = 4
+        Me.Btn3.Text = "Trojka"
+        Me.Btn3.UseVisualStyleBackColor = True
         '
         'Form1
         '
@@ -340,9 +351,9 @@ Partial Class Form1
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TabPage2.ResumeLayout(False)
         CType(Me.DataSetEdenBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataSetEden, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage2.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -384,5 +395,6 @@ Partial Class Form1
     Friend WithEvents FbDataAdapter1 As FirebirdSql.Data.FirebirdClient.FbDataAdapter
     Friend WithEvents FbCSelectZaznamy As FirebirdSql.Data.FirebirdClient.FbCommand
     Friend WithEvents BtmLoadZaznamy As System.Windows.Forms.Button
+    Friend WithEvents Btn3 As System.Windows.Forms.Button
 
 End Class
