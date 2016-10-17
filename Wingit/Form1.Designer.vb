@@ -31,6 +31,7 @@ Partial Class Form1
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.Btn3 = New System.Windows.Forms.Button()
         Me.BtmLoadZaznamy = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.IDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -61,7 +62,7 @@ Partial Class Form1
         Me.FbConnection1 = New FirebirdSql.Data.FirebirdClient.FbConnection()
         Me.FbDataAdapter1 = New FirebirdSql.Data.FirebirdClient.FbDataAdapter()
         Me.FbCSelectZaznamy = New FirebirdSql.Data.FirebirdClient.FbCommand()
-        Me.Btn3 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.StatusStrip1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -122,6 +123,7 @@ Partial Class Form1
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.Button2)
         Me.TabPage1.Controls.Add(Me.Btn3)
         Me.TabPage1.Controls.Add(Me.BtmLoadZaznamy)
         Me.TabPage1.Controls.Add(Me.DataGridView1)
@@ -133,6 +135,15 @@ Partial Class Form1
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Procesy"
         Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'Btn3
+        '
+        Me.Btn3.Location = New System.Drawing.Point(440, 16)
+        Me.Btn3.Name = "Btn3"
+        Me.Btn3.Size = New System.Drawing.Size(75, 23)
+        Me.Btn3.TabIndex = 4
+        Me.Btn3.Text = "Trojka"
+        Me.Btn3.UseVisualStyleBackColor = True
         '
         'BtmLoadZaznamy
         '
@@ -327,14 +338,14 @@ Partial Class Form1
         FbParameter1.Value = "'1.1.2016'"
         Me.FbCSelectZaznamy.Parameters.Add(FbParameter1)
         '
-        'Btn3
+        'Button2
         '
-        Me.Btn3.Location = New System.Drawing.Point(440, 16)
-        Me.Btn3.Name = "Btn3"
-        Me.Btn3.Size = New System.Drawing.Size(75, 23)
-        Me.Btn3.TabIndex = 4
-        Me.Btn3.Text = "Trojka"
-        Me.Btn3.UseVisualStyleBackColor = True
+        Me.Button2.Location = New System.Drawing.Point(536, 16)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(74, 22)
+        Me.Button2.TabIndex = 5
+        Me.Button2.Text = "čtyřka"
+        Me.Button2.UseVisualStyleBackColor = True
         '
         'Form1
         '
@@ -396,5 +407,6 @@ Partial Class Form1
     Friend WithEvents FbCSelectZaznamy As FirebirdSql.Data.FirebirdClient.FbCommand
     Friend WithEvents BtmLoadZaznamy As System.Windows.Forms.Button
     Friend WithEvents Btn3 As System.Windows.Forms.Button
+    Friend WithEvents Button2 As System.Windows.Forms.Button
 
 End Class
