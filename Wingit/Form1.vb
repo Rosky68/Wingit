@@ -9,6 +9,9 @@
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
+        Me.Text = Me.Text & " " & My.Application.Info.Version.ToString
+        Me.ToolStripStatusLabel3.Text = My.Application.Info.Copyright.ToString
+        Me.ToolStripStatusLabel1.Text = Now.TimeOfDay.ToString & ": Starting"
         AddLV("Starting ..")
     End Sub
 

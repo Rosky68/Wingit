@@ -8,11 +8,11 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("WAgit")> 
+<Assembly: AssemblyTitle("Wingit")> 
 <Assembly: AssemblyDescription("")> 
 <Assembly: AssemblyCompany("")> 
-<Assembly: AssemblyProduct("WAgit")> 
-<Assembly: AssemblyCopyright("Copyright ©  2016")> 
+<Assembly: AssemblyProduct("WinGIT")> 
+<Assembly: AssemblyCopyright("Copyright SkySoft ©  2016")> 
 <Assembly: AssemblyTrademark("")> 
 
 <Assembly: ComVisible(False)>
