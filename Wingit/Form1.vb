@@ -22,7 +22,11 @@
     End Sub
 
     Private Sub LoadEden()
-        Me.FbDataAdapter1.Fill(Me.DataSetEden.ZAZNAMY)
+        Try
+            Me.FbDataAdapter1.Fill(Me.DataSetEden.ZAZNAMY)
+        Catch ex As Exception
+        End Try
+
     End Sub
 
 
