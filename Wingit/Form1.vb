@@ -1,6 +1,7 @@
 ﻿Public Class Form1
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+
         Call aa()
     End Sub
 
@@ -20,4 +21,12 @@
         lvi.SubItems.Add(Mess)
     End Sub
 
+    Private Sub LoadEden()
+        Me.FbDataAdapter1.Fill(Me.DataSetEden.ZAZNAMY)
+    End Sub
+
+
+    Private Sub BtmLoadZaznamy_Click(sender As Object, e As EventArgs) Handles BtmLoadZaznamy.Click
+        LoadEden()
+    End Sub
 End Class
